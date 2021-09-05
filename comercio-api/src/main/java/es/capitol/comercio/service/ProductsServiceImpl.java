@@ -99,10 +99,7 @@ public class ProductsServiceImpl implements ProductsService {
 		}
 
 		findById(entity.getProductId()).ifPresent(entidad -> {
-			List<PricesList> pricesLists = entidad.getPricesLists();
-			if (Utilities.validationsList(pricesLists) == true) {
-				throw new ZMessManager().new DeletingException("pricesLists");
-			}
+			
 			List<Prices> priceses = entidad.getPriceses();
 			if (Utilities.validationsList(priceses) == true) {
 				throw new ZMessManager().new DeletingException("priceses");

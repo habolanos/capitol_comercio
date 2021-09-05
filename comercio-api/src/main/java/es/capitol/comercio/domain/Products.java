@@ -52,8 +52,6 @@ public class Products implements java.io.Serializable {
 	private Long state;
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "products")
-	private List<PricesList> pricesLists = new ArrayList<>();
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "products")
 	private List<Prices> priceses = new ArrayList<>();
 
 }

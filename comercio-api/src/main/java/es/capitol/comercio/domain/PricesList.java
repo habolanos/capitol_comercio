@@ -7,8 +7,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -35,11 +33,6 @@ public class PricesList implements java.io.Serializable {
 	@Column(name = "price_list_id", unique = true, nullable = false)
 	@NotNull
 	private Long priceListId;
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "product_id")
-	@NotNull
-	private Products products;
 
 	@Column(name = "state")
 	private Long state;

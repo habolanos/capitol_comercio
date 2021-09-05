@@ -8,8 +8,6 @@ import es.capitol.comercio.domain.Brands;
 import es.capitol.comercio.dto.BrandsDTO;
 
 /**
- * @author Harold Adrian Bolaños Rodriguez
- *
  *
  *         Mapper Build with MapStruct https://mapstruct.org MapStruct is a code
  *         generator that greatly simplifies the implementation of mappings

@@ -21,5 +21,4 @@ public class PricesListDTO implements Serializable {
 	@NotNull
 	private Long priceListId;
 	private Long state;
-	private Long productId_Products;
 }
