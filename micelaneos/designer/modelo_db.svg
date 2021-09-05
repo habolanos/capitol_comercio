@@ -6,16 +6,13 @@
    <text x="481" y="350" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="middle">FK_PRODUCTS_TO_TYPE_PRO</text>
    <path d="M103,230 L103,276 A8,8 0 0,0 111,284 L242,284" fill="none" stroke="#800040" stroke-width="1"/>
    <polygon fill="#800040" points="242,284 229,287 229,281" stroke="#800040" stroke-width="1" stroke-linejoin="miter"/>
-   <text x="104" y="260" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="middle">FK_PRICES_TO_PRODUCTS</text>
+   <text x="104" y="261" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="middle">FK_PRICES_TO_PRODUCTS</text>
    <path d="M103,92 L103,40 A8,8 0 0,1 111,32 L394,32" fill="none" stroke="#800040" stroke-width="1"/>
    <polygon fill="#800040" points="394,32 380,35 380,29" stroke="#800040" stroke-width="1" stroke-linejoin="miter"/>
    <text x="103" y="66" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="middle">FK_PRICES_TO_BRANDS</text>
    <polyline fill="none" points="204,137 403,137" stroke="#800040" stroke-width="1"/>
    <polygon fill="#800040" points="403,137 389,140 389,134" stroke="#800040" stroke-width="1" stroke-linejoin="miter"/>
-   <text x="303" y="132" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="middle">FK_PRICES_TO_PRICES_LIST</text>
-   <polyline fill="none" points="407,167 407,248" stroke="#800040" stroke-width="1"/>
-   <polygon fill="#800040" points="407,248 404,235 410,235" stroke="#800040" stroke-width="1" stroke-linejoin="miter"/>
-   <text x="407" y="210" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="middle">FK_PRICES_L_TO_PRODUCTS</text>
+   <text x="303" y="133" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="middle">FK_PRICES_TO_PRICES_LIST</text>
    <rect x="2" y="92" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
    <defs>
       <linearGradient id="Gradient1" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
@@ -100,22 +97,19 @@
    <text x="469" y="426" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="start" text-decoration="underline">VARCHAR(3)</text>
    <text x="469" y="439" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="start">VARCHAR(30)</text>
    <text x="544" y="426" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="start" text-decoration="underline">&lt;pk&gt;</text>
-   <rect x="403" y="107" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <rect x="403" y="110" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
    <defs>
       <linearGradient id="Gradient5" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
          <stop offset="5%" stop-color="#ffffff"/>
          <stop offset="95%" stop-color="#d28902"/>
       </linearGradient>
    </defs>
-   <rect x="403" y="107" fill="url(#Gradient5)" width="183" height="60" stroke="#804000" stroke-width="1"/>
-   <text x="494" y="118" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="middle">PRICES_LIST</text>
-   <line x1="403" x2="586" y1="124" y2="124" stroke="#804000" stroke-width="1"/>
-   <text x="407" y="134" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="start" text-decoration="underline">PRICE_LIST_ID</text>
-   <text x="407" y="147" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="start">PRODUCT_ID</text>
-   <text x="407" y="160" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="start">STATE</text>
-   <text x="491" y="134" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="start" text-decoration="underline">NUMERIC(5)</text>
-   <text x="491" y="147" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="start">NUMERIC(5)</text>
-   <text x="491" y="160" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="start">NUMERIC(1)</text>
-   <text x="558" y="134" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="start" text-decoration="underline">&lt;pk&gt;</text>
-   <text x="558" y="147" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="start">&lt;fk&gt;</text>
+   <rect x="403" y="110" fill="url(#Gradient5)" width="183" height="54" stroke="#804000" stroke-width="1"/>
+   <text x="494" y="121" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="middle">PRICES_LIST</text>
+   <line x1="403" x2="586" y1="127" y2="127" stroke="#804000" stroke-width="1"/>
+   <text x="407" y="137" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="start" text-decoration="underline">PRICE_LIST_ID</text>
+   <text x="407" y="150" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="start">STATE</text>
+   <text x="491" y="137" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="start" text-decoration="underline">NUMERIC(5)</text>
+   <text x="491" y="150" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="start">NUMERIC(1)</text>
+   <text x="558" y="137" fill="#000000" font-size="10" font-family="'Arial Unicode MS','Arial'" text-anchor="start" text-decoration="underline">&lt;pk&gt;</text>
 </svg>
