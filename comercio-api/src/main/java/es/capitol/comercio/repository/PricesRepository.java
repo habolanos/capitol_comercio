@@ -29,6 +29,6 @@ public interface PricesRepository extends JpaRepository<Prices, Integer> {
 	@Query("select p from Prices p where p.products = ?1 and p.brands = ?2 and ?3 between p.startDate and p.endDate")
 	List<Prices> findByUseCase(Date fechaAplicacion, Long productId, Long brandId);
 	
-	@Query(value = "SELECT * FROM PRICES P WHERE P.PRODUCT_ID = ?2 AND P.BRAND_ID = ?3 AND TO_TIMESTAMP(?1, 'YYYY-MM-DD HH24:MI:SS') BETWEEN P.START_DATE AND P.END_DATE", nativeQuery = true)
+	@Query(value = "SELECT * FROM PRICES P WHERE P.PRODUCT_ID = ?2 AND P.BRAND_ID = ?3 AND TO_TIMESTAMP(?1, 'YYYY-MM-DD HH24:MI:SS') BETWEEN P.START_DATE AND P.END_DATE ORDER BY PRICE DESC FETCH FIRST 1 ROWS ONLY", nativeQuery = true)
 	List<Prices> findByUseCase(String fechaAplicacion, Long productId, Long brandId);
 }
