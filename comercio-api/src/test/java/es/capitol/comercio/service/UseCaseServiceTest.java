@@ -2,8 +2,10 @@ package es.capitol.comercio.service;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
@@ -29,7 +31,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class UseCaseServiceTest{
 	@Autowired
-	private TestRestTemplate testRestTemplate;
+	private TestRestTemplate restTemplate;
 	  
 	@LocalServerPort
 	private Integer port;
@@ -58,21 +60,15 @@ public class UseCaseServiceTest{
     	
     	log.info(peticion.toString());
     	assertNotNull(pricesService);
-    	resultado = pricesService.findAll();
-    	//resultado = pricesService.findByUseCase(peticion.getApplicationDate(), peticion.getProductId(), peticion.getBrandId());
+    	
+    	resultado = pricesService.findByUseCase(peticion.getApplicationDate(), peticion.getProductId(), peticion.getBrandId());
     	
     	log.info("Validacion Coleccion");
-    	assertFalse(resultado.size()>0);
-    	
-    	log.info("Validacion para cada item");
-    	for (Prices item : resultado) {
-			assertNotNull(item);
-			log.info(item.toString());
-		}
+    	assertTrue(resultado.size()>0);
+
     	log.info("Fin Test 1");
     }
     
-    /*
     @Test
     @DisplayName("Test 2: petición a las 16:00 del día 14 del producto 35455   para la brand 1 (ZARA)")
     public void test2() {
@@ -90,12 +86,7 @@ public class UseCaseServiceTest{
     	
     	log.info("Validacion Colecion Retornada");
     	assertTrue(resultado.size()>0);
-    	
-    	log.info("Validacion para cada item");
-    	for (Prices item : resultado) {
-			assertNotNull(item);
-			log.info(item.toString());
-		}
+
     	log.info("Fin Test 2");
     }
 
@@ -116,12 +107,7 @@ public class UseCaseServiceTest{
     	
     	log.info("Validacion Colecion Retornada");
     	assertTrue(resultado.size()>0);
-    	
-    	log.info("Validacion para cada item");
-    	for (Prices item : resultado) {
-			assertNotNull(item);
-			log.info(item.toString());
-		}
+
     	log.info("Fin Test 3");
     }
 
@@ -142,12 +128,7 @@ public class UseCaseServiceTest{
     	
     	log.info("Validacion Colecion Retornada");
     	assertTrue(resultado.size()>0);
-    	
-    	log.info("Validacion para cada item");
-    	for (Prices item : resultado) {
-			assertNotNull(item);
-			log.info(item.toString());
-		}
+
     	log.info("Fin Test 4");
     }
     
@@ -168,14 +149,8 @@ public class UseCaseServiceTest{
     	
     	log.info("Validacion Colecion Retornada");
     	assertTrue(resultado.size()>0);
-    	
-    	log.info("Validacion para cada item");
-    	for (Prices item : resultado) {
-			assertNotNull(item);
-			log.info(item.toString());
-		}
+
     	log.info("Fin Test 5");
     }
-    */
     
 }
