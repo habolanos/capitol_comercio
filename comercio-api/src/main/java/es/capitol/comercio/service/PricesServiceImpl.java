@@ -1,5 +1,6 @@
 package es.capitol.comercio.service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -134,4 +135,16 @@ public class PricesServiceImpl implements PricesService {
 
 		return pricesRepository.findById(pricesId);
 	}
+	
+	/**
+	 * Case de Uso para Capitol
+	 *
+	 */
+	@Transactional(readOnly = true)
+	public List<Prices> findByUseCase(String fechaAplicacion, Long productId, Long brandId){
+		log.debug("useCase for Capitol");
+		
+		return pricesRepository.findByUseCase(fechaAplicacion, productId, brandId);
+	}
+	
 }
