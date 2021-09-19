@@ -17,7 +17,7 @@
   "productId":"35455", 
   "brandId":"1"
 }</con:request><con:originalUri>http://localhost/api/v1/usecase</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="Test 2" id="44f69b1c-50af-4f38-965e-775bdb04a02c" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer  eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MzA4ODExNjMsImlzcyI6Imhhcm9sZGFkcmlhbkBnbWFpbC5jb20iLCJzdWIiOiJhcGkiLCJleHAiOjE2MzE3NDUxNjN9.2PDYp3eEgTBPX5LqRv4LN7ChaW7uXe8_niom2dRUiIE" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:9090</con:endpoint><con:request>{
-  "applicationDate":"2021-01-01T04:59:59.000Z",
-  "productId":"35445", 
+  "applicationDate":"2020-06-14 16:00:00",
+  "productId":"35455", 
   "brandId":"1"
 }</con:request><con:originalUri>http://localhost/api/v1/usecase</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

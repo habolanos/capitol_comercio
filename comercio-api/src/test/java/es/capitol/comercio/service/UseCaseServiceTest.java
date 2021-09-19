@@ -1,11 +1,9 @@
 package es.capitol.comercio.service;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
@@ -13,8 +11,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
-import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import es.capitol.comercio.domain.Prices;
 import es.capitol.comercio.dto.UseCaseDTO;
@@ -29,13 +28,9 @@ import lombok.extern.slf4j.Slf4j;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @Slf4j
+@Transactional(readOnly = true, timeout = 5)
 public class UseCaseServiceTest{
-	@Autowired
-	private TestRestTemplate restTemplate;
-	  
-	@LocalServerPort
-	private Integer port;
-	
+		
 	@Autowired
     private PricesService pricesService;
 
@@ -45,8 +40,8 @@ public class UseCaseServiceTest{
 *   Test 3: petición a las 21:00 del día 14 del producto 35455   para la brand 1 (ZARA)
 *   Test 4: petición a las 10:00 del día 15 del producto 35455   para la brand 1 (ZARA)
 *   Test 5: petición a las 21:00 del día 16 del producto 35455   para la brand 1 (ZARA)
-*/    
-    @Test
+*/  
+	@Test
     @DisplayName("Test 1: petición a las 10:00 del día 14 del producto 35455   para la brand 1 (ZARA)")
     public void test1() {
 
@@ -64,8 +59,14 @@ public class UseCaseServiceTest{
     	resultado = pricesService.findByUseCase(peticion.getApplicationDate(), peticion.getProductId(), peticion.getBrandId());
     	
     	log.info("Validacion Coleccion");
+    	log.info("size "+resultado.size());
     	assertTrue(resultado.size()>0);
-
+    	
+    	log.info("Validacion para cada item");
+    	for (Prices item : resultado) {
+			assertNotNull(item);
+			log.info(item.toString());
+		}
     	log.info("Fin Test 1");
     }
     
@@ -86,7 +87,12 @@ public class UseCaseServiceTest{
     	
     	log.info("Validacion Colecion Retornada");
     	assertTrue(resultado.size()>0);
-
+    	
+    	log.info("Validacion para cada item");
+    	for (Prices item : resultado) {
+			assertNotNull(item);
+			log.info(item.toString());
+		}
     	log.info("Fin Test 2");
     }
 
@@ -107,7 +113,12 @@ public class UseCaseServiceTest{
     	
     	log.info("Validacion Colecion Retornada");
     	assertTrue(resultado.size()>0);
-
+    	
+    	log.info("Validacion para cada item");
+    	for (Prices item : resultado) {
+			assertNotNull(item);
+			log.info(item.toString());
+		}
     	log.info("Fin Test 3");
     }
 
@@ -128,7 +139,12 @@ public class UseCaseServiceTest{
     	
     	log.info("Validacion Colecion Retornada");
     	assertTrue(resultado.size()>0);
-
+    	
+    	log.info("Validacion para cada item");
+    	for (Prices item : resultado) {
+			assertNotNull(item);
+			log.info(item.toString());
+		}
     	log.info("Fin Test 4");
     }
     
@@ -149,7 +165,12 @@ public class UseCaseServiceTest{
     	
     	log.info("Validacion Colecion Retornada");
     	assertTrue(resultado.size()>0);
-
+    	
+    	log.info("Validacion para cada item");
+    	for (Prices item : resultado) {
+			assertNotNull(item);
+			log.info(item.toString());
+		}
     	log.info("Fin Test 5");
     }
     
